@@ -88,6 +88,21 @@ IB_DESIGNABLE
 @property (nonatomic, strong) NSArray *labels;
 
 /**
+ *  Image size for slider labels.
+ */
+@property (nonatomic, assign) CGSize sliderLabelImageSize;
+
+/**
+ *  Image for slider labels.
+ */
+@property (nonatomic, copy) NSArray<UIImage *>  *sliderLabelImages;
+
+/**
+ *  Offet between image label.
+ */
+@property (nonatomic, assign) IBInspectable CGFloat imageLabelOffet;
+
+/**
  *  Font of dot labels.
  *  Can not be `IBInspectable`. http://openradar.appspot.com/21889252
  */
@@ -109,10 +124,10 @@ IB_DESIGNABLE
 @property (nonatomic) StepSliderTextOrientation labelOrientation;
 
 /**
- *  If `YES` adjust first and last labels to StepSlider frame. And change alingment to left and right. 
+ *  If `YES` adjust first and last labels to StepSlider frame. And change alingment to left and right.
  *  Otherwise label position is same as trackCircle, and aligment always is center.
  */
-@property (nonatomic) IBInspectable BOOL adjustLabel;
+//@property (nonatomic) IBInspectable BOOL adjustLabel;
 
 /**
  *  Generate haptic feedback when value was changed. Ignored if low power mode is turned on.

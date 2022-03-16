@@ -243,9 +243,26 @@
     static NSUInteger flag = 0;
     switch (flag % 3) {
         case 0:
+            self.sliderView.imageLabelOffet = 10;
+            self.sliderView.sliderLabelImageSize = CGSizeMake(10, 9);
+            self.sliderView.sliderLabelImages = @[
+                [UIImage imageNamed:@"SliderVipLabelIcon"],
+                [UIImage imageNamed:@"SliderVipLabelIcon"],
+                [UIImage imageNamed:@"SliderVipLabelIcon"]
+            ];
             self.sliderView.labels = @[@"First", @"Second", @"Third"];
             break;
         case 1:
+            
+            self.sliderView.imageLabelOffet = 5;
+            self.sliderView.sliderLabelImageSize = CGSizeMake(30, 27);
+            self.sliderView.sliderLabelImages = @[
+                [UIImage new],
+                [UIImage new],
+                [UIImage imageNamed:@"SliderVipLabelIcon"],
+                [UIImage imageNamed:@"SliderVipLabelIcon"],
+                [UIImage imageNamed:@"SliderVipLabelIcon"]
+            ];
             self.sliderView.labels = @[@"1", @"2", @"3", @"4", @"5"];
             break;
         case 2:
@@ -338,7 +355,7 @@
 - (IBAction)adjustLabels:(UIButton *)sender
 {
     sender.selected = !sender.selected;
-    self.sliderView.adjustLabel = sender.selected;
+//    self.sliderView.adjustLabel = sender.selected;
 }
 
 - (IBAction)changeSliderCircleImage:(UIButton *)sender
