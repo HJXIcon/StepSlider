@@ -290,7 +290,7 @@ void withoutCAAnimation(withoutAnimationBlock code)
             CGFloat textHeight = [self labelHeightWithMaxWidth:stepWidth];
             CGFloat imageY = labelsY + textHeight/2.0;
             
-            if (i == 0) {·
+            if (i == 0) {
                 trackLabelImage.position = CGPointMake(position.x + imageSize.width/2.0, imageY);
             }
             else if (i == self.maxCount - 1) {
