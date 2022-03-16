@@ -286,7 +286,9 @@ void withoutCAAnimation(withoutAnimationBlock code)
         BOOL needAddImageLayer = [self needAddImageLayerWithIndex:i];
         
         if (needAddImageLayer) {
-            CGFloat imageY = labelsY + labelsHeight/4.0;
+            
+            CGFloat textHeight = [self labelHeightWithMaxWidth:stepWidth];
+            CGFloat imageY = labelsY + textHeight/2.0;
             
             if (i == 0) {
                 trackLabelImage.position = CGPointMake(position.x + imageSize.width/2.0, imageY);
